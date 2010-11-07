@@ -7,8 +7,14 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
-
-<%= yield %>
+  <header>
+  <h1><%=link_to "CodeRumble", root_path%></h1>
+    <nav>
+        <%=link_to "Login", "/users/sign_in"%>
+        <%=link_to "Register", "/users/sign_up"%>
+    </nav>
+  </header>
+  <%= yield %>
 
 </body>
 </html>
