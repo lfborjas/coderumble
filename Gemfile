@@ -34,3 +34,5 @@ group :development, :test do
   gem 'capybara'
   gem 'redgreen'
 end
+
+gem 'devise'
