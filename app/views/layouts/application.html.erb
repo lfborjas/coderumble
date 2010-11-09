@@ -9,9 +9,14 @@
 <body>
   <header>
   <h1><%=link_to "CodeRumble", root_path%></h1>
-    <nav>
-        <%=link_to "Login", "/users/sign_in"%>
-        <%=link_to "Register", "/users/sign_up"%>
+  <nav>
+    <%unless user_signed_in?%>
+        <%=link_to "Login", new_user_session_path%>
+        <%=link_to "Register", new_user_registration_path%>
+      <%else%>
+        <%=current_user.username%>
+        <%= link_to "Logout", destroy_user_session_path %>
+    <%end%>  
     </nav>
   </header>
   <%= yield %>
