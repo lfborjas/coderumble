@@ -29,8 +29,8 @@ class UserTest < ActiveSupport::TestCase
     u2 = User.new :username=>uname, :email=>"net@mail.com", :password=>"supersecret"
     
     assert !u2.save
-    assert_equal 1, u.errors.size
-    assert u.errors[:username].any?
+    assert_equal 1, u2.errors.size
+    assert u2.errors[:username].any?
 
   end
 end
