@@ -18,7 +18,10 @@
         <%= link_to "Logout", destroy_user_session_path %>
     <%end%>  
     </nav>
-  </header>
+    </header>
+  <p class="notice"><%= flash[:notice] %></p>
+  <p class="error"><%= flash[:error] %></p>
+
   <%= yield %>
 
 </body>

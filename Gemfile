@@ -34,6 +34,7 @@ group :development, :test do
   gem 'capybara'
   gem 'redgreen'
   gem 'annotate-models'
+  gem 'launchy'
 end
 
 gem 'devise'
